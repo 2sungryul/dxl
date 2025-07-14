@@ -10,11 +10,23 @@ Subscriber node subscribes the velocity command topic and sends it to dynamixel.
 
 # run subscriber on Jetson nano
 
+$ cd ~/ros2_ws/src
+
+$ git clone https://github.com/2sungryul/dxl.git
+
+$ cd ~/ros2_ws
+
+$ colcon build --symlink-install --packages-select dxl
+
+$ source install/local_setup.bash
+
 $ sudo chmod a+rw /dev/ttyUSB0
 
 $ ros2 run dxl sub
 
-# run publisher on Jetson nano or WSL2
+# run publisher on WSL2
+
+open linux terminal on WSL2
 
 $ cd ~/ros2_ws/src
 
