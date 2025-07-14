@@ -24,19 +24,7 @@ $ sudo chmod a+rw /dev/ttyUSB0
 
 $ ros2 run dxl sub
 
-# run publisher on WSL2
-
-open linux terminal on WSL2
-
-$ cd ~/ros2_ws/src
-
-$ git clone https://github.com/2sungryul/dxl.git
-
-$ cd ~/ros2_ws
-
-$ colcon build --symlink-install --packages-select dxl
-
-$ source install/local_setup.bash
+# run publisher on Jetson nano
 
 $ ros2 run dxl pub
 
