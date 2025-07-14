@@ -8,7 +8,13 @@ Publisher node receives a motion command from keyboard and publishes velocity co
 
 Subscriber node subscribes the velocity command topic and sends it to dynamixel.
 
-Open linux terminal on Jetson nano
+# run subscriber on Jetson nano
+
+$ sudo chmod a+rw /dev/ttyUSB0
+
+$ ros2 run dxl sub
+
+# run publisher on Jetson nano or WSL2
 
 $ cd ~/ros2_ws/src
 
@@ -24,8 +30,3 @@ $ ros2 run dxl pub
 
 command) f: forward, b: backword, s: stop, l : ccw rotate, r : cw rotate
 
-Open new linux terminal on Jetson nano
-
-$ sudo chmod a+rw /dev/ttyUSB0
-
-$ ros2 run dxl sub
